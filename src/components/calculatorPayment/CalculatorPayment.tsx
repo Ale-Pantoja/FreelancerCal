@@ -12,8 +12,7 @@ export const CalculatorPayment = () => {
   const totalToReceive = amount - commission - selectedPlatform.fixedFee;
 
   return (
-    <div>
-      <h1>Calculadora de pago</h1>
+    <div className="flex flex-col gap-4 h-full">
       <FormPayment
         onAmountChange={setAmount}
         onPlatformChange={setSelectedPlatform}
