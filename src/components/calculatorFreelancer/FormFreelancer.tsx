@@ -1,22 +1,3 @@
-interface FormFreelancerProps {
-  expenses: {
-    internet: number;
-    software: number;
-    electricity: number;
-    other: number;
-  };
-  setExpenses: (expenses: {
-    internet: number;
-    software: number;
-    electricity: number;
-    other: number;
-  }) => void;
-  desiredSalary: number;
-  setDesiredSalary: (salary: number) => void;
-  workHours: number;
-  setWorkHours: (hours: number) => void;
-}
-
 export const FormFreelancer = ({
   expenses,
   setExpenses,
@@ -24,87 +5,108 @@ export const FormFreelancer = ({
   setDesiredSalary,
   workHours,
   setWorkHours,
-}: FormFreelancerProps) => {
+}: any) => {
   return (
-    <div className="bg-slate-700 p-6 rounded-2xl shadow-lg">
-      <h3 className="text-xl font-bold text-white mb-4">Gastos</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
-          <label className="block text-sm font-medium text-slate-300 mb-1">
-            Internet
-          </label>
-          <input
-            type="number"
-            value={expenses.internet}
-            onChange={(e) =>
-              setExpenses({ ...expenses, internet: Number(e.target.value) })
-            }
-            className="bg-slate-600 text-slate-300 placeholder:text-slate-500 border border-slate-500 focus:ring-blue-500 focus:border-blue-500"
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-slate-300 mb-1">
-            Software
-          </label>
-          <input
-            type="number"
-            value={expenses.software}
-            onChange={(e) =>
-              setExpenses({ ...expenses, software: Number(e.target.value) })
-            }
-            className="bg-slate-600 text-slate-300 placeholder:text-slate-500 border border-slate-500 focus:ring-blue-500 focus:border-blue-500"
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-slate-300 mb-1">
-            Electricidad
-          </label>
-          <input
-            type="number"
-            value={expenses.electricity}
-            onChange={(e) =>
-              setExpenses({ ...expenses, electricity: Number(e.target.value) })
-            }
-            className="bg-slate-600 text-slate-300 placeholder:text-slate-500 border border-slate-500 focus:ring-blue-500 focus:border-blue-500"
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-slate-300 mb-1">
-            Otros
-          </label>
-          <input
-            type="number"
-            value={expenses.other}
-            onChange={(e) =>
-              setExpenses({ ...expenses, other: Number(e.target.value) })
-            }
-            className="bg-slate-600 text-slate-300 placeholder:text-slate-500 border border-slate-500 focus:ring-blue-500 focus:border-blue-500"
-          />
-        </div>
-      </div>
+    <div className="bg-[#E5E3D4]/10 backdrop-blur-md p-5 rounded-2xl shadow-xl border border-[#E5E3D4]/20">
+      <h3 className="text-base font-semibold text-[#9ABF80] mb-4 tracking-wide">
+        Gastos & Objetivos
+      </h3>
 
-      <div className="mt-6">
-        <label className="block text-sm font-medium text-slate-500 mb-2">
-          Salario Deseado
-        </label>
-        <input
-          type="number"
-          value={desiredSalary}
-          onChange={(e) => setDesiredSalary(Number(e.target.value))}
-          className="bg-slate-500 text-slate-300 placeholder:text-slate-500 border border-slate-500 focus:ring-blue-500 focus:border-blue-500"
-        />
-      </div>
+      <div className="space-y-3">
+        <div className="grid grid-cols-2 gap-3">
+          <div>
+            <label className="block text-[10px] text-[#E5E3D4]/60 mb-1 ml-1 uppercase tracking-wider">
+              Internet
+            </label>
+            <input
+              type="number"
+              value={expenses.internet}
+              onChange={(e) =>
+                setExpenses({ ...expenses, internet: Number(e.target.value) })
+              }
+              className="w-full bg-[#1C325B]/80 text-[#E5E3D4] p-2 rounded-xl border border-[#6A669D]/30 focus:ring-2 focus:ring-[#9ABF80]/50 focus:border-[#9ABF80] transition-all outline-none text-sm"
+              placeholder="0.00"
+            />
+          </div>
 
-      <div className="mt-6">
-        <label className="block text-sm font-medium text-slate-500 mb-2">
-          Horas de Trabajo por Mes
-        </label>
-        <input
-          type="number"
-          value={workHours}
-          onChange={(e) => setWorkHours(Number(e.target.value))}
-          className="bg-slate-500 text-slate-300 placeholder:text-slate-500 border border-slate-500 focus:ring-blue-500 focus:border-blue-500"
-        />
+          <div>
+            <label className="block text-[10px] text-[#E5E3D4]/60 mb-1 ml-1 uppercase tracking-wider">
+              Software
+            </label>
+            <input
+              type="number"
+              value={expenses.software}
+              onChange={(e) =>
+                setExpenses({ ...expenses, software: Number(e.target.value) })
+              }
+              className="w-full bg-[#1C325B]/80 text-[#E5E3D4] p-2 rounded-xl border border-[#6A669D]/30 focus:ring-2 focus:ring-[#9ABF80]/50 focus:border-[#9ABF80] transition-all outline-none text-sm"
+              placeholder="0.00"
+            />
+          </div>
+
+          <div>
+            <label className="block text-[10px] text-[#E5E3D4]/60 mb-1 ml-1 uppercase tracking-wider">
+              Luz
+            </label>
+            <input
+              type="number"
+              value={expenses.electricity}
+              onChange={(e) =>
+                setExpenses({
+                  ...expenses,
+                  electricity: Number(e.target.value),
+                })
+              }
+              className="w-full bg-[#1C325B]/80 text-[#E5E3D4] p-2 rounded-xl border border-[#6A669D]/30 focus:ring-2 focus:ring-[#9ABF80]/50 focus:border-[#9ABF80] transition-all outline-none text-sm"
+              placeholder="0.00"
+            />
+          </div>
+
+          <div>
+            <label className="block text-[10px] text-[#E5E3D4]/60 mb-1 ml-1 uppercase tracking-wider">
+              Otros
+            </label>
+            <input
+              type="number"
+              value={expenses.other}
+              onChange={(e) =>
+                setExpenses({ ...expenses, other: Number(e.target.value) })
+              }
+              className="w-full bg-[#1C325B]/80 text-[#E5E3D4] p-2 rounded-xl border border-[#6A669D]/30 focus:ring-2 focus:ring-[#9ABF80]/50 focus:border-[#9ABF80] transition-all outline-none text-sm"
+              placeholder="0.00"
+            />
+          </div>
+        </div>
+
+        <div className="space-y-2 pt-1">
+          <div>
+            <label className="block text-[10px] text-[#E5E3D4]/60 mb-1 ml-1 uppercase tracking-wider">
+              Salario Deseado
+            </label>
+            <div className="relative">
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[#6A669D] text-xs">
+                $
+              </span>
+              <input
+                type="number"
+                value={desiredSalary}
+                onChange={(e) => setDesiredSalary(Number(e.target.value))}
+                className="w-full bg-[#1C325B]/80 text-[#E5E3D4] pl-7 pr-4 py-2 rounded-xl border border-[#6A669D]/30 focus:ring-2 focus:ring-[#9ABF80]/50 focus:border-[#9ABF80] outline-none text-sm font-medium"
+              />
+            </div>
+          </div>
+          <div>
+            <label className="block text-[10px] text-[#E5E3D4]/60 mb-1 ml-1 uppercase tracking-wider">
+              Horas Mensuales
+            </label>
+            <input
+              type="number"
+              value={workHours}
+              onChange={(e) => setWorkHours(Number(e.target.value))}
+              className="w-full bg-[#1C325B]/80 text-[#E5E3D4] px-4 py-2 rounded-xl border border-[#6A669D]/30 focus:ring-2 focus:ring-[#9ABF80]/50 focus:border-[#9ABF80] outline-none text-sm font-medium"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

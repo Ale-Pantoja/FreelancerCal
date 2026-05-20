@@ -20,11 +20,7 @@ export const CalculatorFreelancer = () => {
   const hourlyRate = workHours > 0 ? totalNeeded / workHours : 0;
 
   return (
-    <div className="max-w-md mx-auto p-8 bg-slate-800 rounded-3xl shadow-xl border border-slate-700">
-      <h2 className="text-2xl font-bold text-white mb-6">
-        Calculadora Freelancer
-      </h2>
-
+    <div className="flex flex-col gap-4 h-full">
       <FormFreelancer
         expenses={expenses}
         setExpenses={setExpenses}
