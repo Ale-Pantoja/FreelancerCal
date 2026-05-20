@@ -9,8 +9,9 @@ body {
   background: linear-gradient(135deg, #1c325b 0%, #2a3d6e 100%);
   color: #e5e3d4;
   min-height: 100vh;
-  height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+
   font-family:
     "Inter",
     ui-sans-serif,
@@ -22,6 +23,13 @@ body {
     "Helvetica Neue",
     Arial,
     sans-serif;
+}
+
+@media (min-width: 1024px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
 }
 
 body::before {
