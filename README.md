@@ -1,4 +1,4 @@
-# 💸 Calculadora Freelancer & Payment Tracker
+# Calculadora Freelancer & Payment Tracker
 
 ![Status](https://img.shields.io/badge/Status-En%20desarrollo-orange?style=for-the-badge)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
