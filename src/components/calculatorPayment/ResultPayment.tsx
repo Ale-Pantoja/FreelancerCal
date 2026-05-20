@@ -4,6 +4,16 @@ interface Props {
   platformName: string;
 }
 
+/**
+ * Componente que muestra de forma visual los resultados finales del cálculo de comisiones.
+ * @component
+ * @param {ResultPaymentProps} props - Propiedades del componente.
+ * @param {number} props.amount - El monto bruto de la transacción.
+ * @param {number} props.totalToReceive - El monto neto que el usuario recibirá.
+ * @param {string} props.platformName - El nombre de la plataforma de pago seleccionada.
+ * @returns {JSX.Element} Una tarjeta con los resultados formateados.
+ */
+
 export const ResultPayment = ({
   amount,
   totalToReceive,

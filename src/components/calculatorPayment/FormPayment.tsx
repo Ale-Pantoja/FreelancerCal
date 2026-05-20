@@ -6,6 +6,20 @@ interface Props {
   currentPlatform: Platform;
 }
 
+/**
+ * Formulario para ingresar el monto y seleccionar la plataforma de pago.
+ * * @component
+ * @param {FormPaymentProps} props - Propiedades del componente.
+ * @param {number} props.amount - El monto neto que el usuario desea recibir en su cuenta.
+ * @param {function} props.setAmount - Función para actualizar el estado del monto en el componente padre.
+ * @param {Object} props.currentPlatform - Objeto con la información de la pasarela de pago activa.
+ * @param {string} props.currentPlatform.name - Nombre de la plataforma (ej. PayPal, Stripe).
+ * @param {number} props.currentPlatform.percentage - Porcentaje de comisión que cobra la plataforma.
+ * @param {number} props.currentPlatform.fixedFee - Comisión fija por transacción de la plataforma.
+ * @param {function} props.onPlatformChange - Función que se ejecuta al hacer clic en una plataforma para cambiarla en el padre.
+ * @returns {JSX.Element} El formulario con el input numérico y la lista dinámica de botones de plataformas.
+ */
+
 export const FormPayment = ({
   onAmountChange,
   onPlatformChange,

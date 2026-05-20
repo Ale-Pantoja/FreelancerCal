@@ -1,3 +1,20 @@
+/**
+ * Formulario para capturar los gastos y objetivos financieros del freelancer.
+ * * @component
+ * @param {FormFreelancerProps} props - Propiedades del componente.
+ * @param {Object} props.expenses - Objeto que contiene los gastos mensuales agrupados.
+ * @param {number} props.expenses.internet - Costo mensual del servicio de internet.
+ * @param {number} props.expenses.software - Costo mensual de licencias de software (Adobe, Figma, etc.).
+ * @param {number} props.expenses.electricity - Costo mensual de la energía eléctrica.
+ * @param {number} props.expenses.other - Suma de otros gastos misceláneos.
+ * @param {function} props.setExpenses - Función del Padre para actualizar el objeto de gastos.
+ * @param {number} props.desiredSalary - La cantidad de dinero limpia que el freelancer quiere ganar al mes.
+ * @param {function} props.setDesiredSalary - Función para actualizar el estado del salario deseado en el Padre.
+ * @param {number} props.workHours - La cantidad de horas totales que el freelancer planea trabajar al mes.
+ * @param {function} props.setWorkHours - Función para actualizar el estado de las horas de trabajo en el Padre.
+ * @returns {JSX.Element} El formulario renderizado con la cuadrícula de inputs.
+ */
+
 export const FormFreelancer = ({
   expenses,
   setExpenses,

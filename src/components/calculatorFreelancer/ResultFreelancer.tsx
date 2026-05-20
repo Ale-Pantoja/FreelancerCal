@@ -1,3 +1,12 @@
+/**
+ * Componente que muestra de forma visual los resultados finales del cálculo freelance.
+ * @component
+ * @param {ResultFreelancerProps} props - Propiedades del componente.
+ * @param {number} props.hourlyRate - La tarifa sugerida por hora calculada en base a los gastos.
+ * @param {number} props.totalMonthlyCost - La suma total de gastos mensuales más el salario deseado.
+ * @returns {JSX.Element} Una tarjeta con el costo mensual y la tarifa por hora formateados.
+ */
+
 export const ResultFreelancer = ({ hourlyRate, totalMonthlyCost }: any) => {
   return (
     <div className="relative overflow-hidden p-5 rounded-2xl shadow-xl group bg-linear-to-br from-[#6A669D] via-[#1C325B] to-[#9ABF80]">

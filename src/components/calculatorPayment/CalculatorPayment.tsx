@@ -1,7 +1,15 @@
 import { useState } from "react";
-import { FormPayment, ResultPayment } from ".";
+import { FormPayment, ResultPayment } from "./index";
 import { PLATFORMS, type Platform } from "../Platforms";
 
+/**
+ * Componente principal que coordina la calculadora de comisiones por pasarelas de pago.
+ * * Maneja los estados del monto requerido por el usuario y la plataforma de pago seleccionada.
+ * Realiza los cálculos matemáticos para determinar la comisión que cobra la pasarela
+ * y el monto total que se debe facturar al cliente.
+ * * @component
+ * @returns {JSX.Element} La estructura que integra el formulario de pagos y el cuadro de resultados.
+ */
 export const CalculatorPayment = () => {
   const [amount, setAmount] = useState<number>(0);
   const [selectedPlatform, setSelectedPlatform] = useState<Platform>(
