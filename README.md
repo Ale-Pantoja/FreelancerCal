@@ -67,7 +67,7 @@ Si deseas clonar este proyecto y ejecutarlo en tu máquina:
 1.  **Clonar el repositorio:**
 
     ```bash
-    git clone [https://github.com/tu-usuario/nombre-de-tu-repo.git](https://github.com/tu-usuario/nombre-de-tu-repo.git)
+    git clone [https://github.com/Ale-Pantoja/FreelancerCal.git](https://github.com/Ale-Pantoja/FreelancerCal.git)
     ```
 
 2.  **Instalar las dependencias:**
