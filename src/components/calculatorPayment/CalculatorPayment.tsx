@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FormPayment, ResultPayment } from "./index";
-import { PLATFORMS, type Platform } from "../Platforms";
+import { PLATFORMS, type Platform } from "./Platforms";
 
 /**
  * Componente principal que coordina la calculadora de comisiones por pasarelas de pago.

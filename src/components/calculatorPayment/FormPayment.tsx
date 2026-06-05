@@ -1,4 +1,4 @@
-import { PLATFORMS, type Platform } from "../Platforms";
+import { PLATFORMS, type Platform } from "./Platforms";
 
 interface Props {
   onAmountChange: (value: number) => void;
