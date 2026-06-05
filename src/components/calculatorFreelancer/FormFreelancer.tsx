@@ -14,6 +14,21 @@
  * @param {function} props.setWorkHours - Función para actualizar el estado de las horas de trabajo en el Padre.
  * @returns {JSX.Element} El formulario renderizado con la cuadrícula de inputs.
  */
+ interface Expenses {
+  internet: number;
+  software: number;
+  electricity: number;
+  other: number;
+}
+
+interface FormFreelancerProps {
+  expenses: Expenses;
+  setExpenses: React.Dispatch<React.SetStateAction<Expenses>>;
+  desiredSalary: number;
+  setDesiredSalary: (value: number) => void;
+  workHours: number;
+  setWorkHours: (value: number) => void;
+}
 
 export const FormFreelancer = ({
   expenses,
@@ -22,7 +37,7 @@ export const FormFreelancer = ({
   setDesiredSalary,
   workHours,
   setWorkHours,
-}: any) => {
+}: FormFreelancerProps) => {
   return (
     <div className="bg-[#E5E3D4]/10 backdrop-blur-md p-5 rounded-2xl shadow-xl border border-[#E5E3D4]/20">
       <h3 className="text-base font-semibold text-[#9ABF80] mb-4 tracking-wide">

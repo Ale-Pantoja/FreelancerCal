@@ -7,7 +7,12 @@
  * @returns {JSX.Element} Una tarjeta con el costo mensual y la tarifa por hora formateados.
  */
 
-export const ResultFreelancer = ({ hourlyRate, totalMonthlyCost }: any) => {
+interface ResultFreelancerProps {
+  hourlyRate: number;
+  totalMonthlyCost: number;
+}
+
+export const ResultFreelancer = ({ hourlyRate, totalMonthlyCost }: ResultFreelancerProps) => {
   return (
     <div className="relative overflow-hidden p-5 rounded-2xl shadow-xl group bg-linear-to-br from-[#6A669D] via-[#1C325B] to-[#9ABF80]">
       <div className="absolute inset-0 bg-black/10 rounded-2xl"></div>
