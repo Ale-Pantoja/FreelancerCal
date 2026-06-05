@@ -6,7 +6,7 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-![Vista previa de la Calculadora](./src/assets/Preview-CalcFreelancer.png)
+![Vista previa de la Calculadora](./public/Preview-CalcFreelancer.png)
 
 Una herramienta profesional diseñada para freelancers y profesionales independientes que necesitan gestionar sus ingresos internacionales con precisión. Esta aplicación permite calcular las comisiones reales de plataformas como PayPal, Binance P2P y Payoneer de forma instantánea.
 
